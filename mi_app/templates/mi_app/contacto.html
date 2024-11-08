@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_/css/styles_contacto.css' %}">
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/mi_app/contacto/">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto-section">
+            <h1>Formulario de Contacto</h1>
+
+            <form method="POST" action="{% url 'contacto' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+            
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* Estilo general para el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Necesario para el pseudo-elemento */
+    color: white;  /* Establece el color de todo el texto a blanco */
+}
+
+/* Añadir la imagen de fondo con opacidad */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-escritorio-moderno-vector-diseno-azul-geometrico_53876-135923.jpg?t=st=1730945734~exp=1730949334~hmac=70469b66e8ab484b1f266d0c2292b533b97054a4cfcff200eaec5d9f8a827ccf&w=1380');
+    background-size: cover;  /* Asegura que la imagen cubra toda la página */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    opacity: 0.9; /* Ajusta la opacidad solo para la imagen */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Estilos para el texto */
+h1, h2, h3, h4 {
+    color: white; /* Asegura que todos los títulos sean blancos */
+}
+
+/* Estilo para el header */
+header {
+    text-align: center;
+    background-color: black; /* Fondo negro para el header */
+    color: white;  /* Color del texto en el header */
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header quede por encima de otros elementos */
+}
+
+/* Estilo para el botón "Contactar" */
+.contact-button {
+    padding: 15px 30px;
+    background-color: black; /* Fondo negro para el botón */
+    color: white;  /* Texto blanco */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el hover del botón "Contactar" */
+.contact-button:hover {
+    background-color: #218838; /* Color al pasar el mouse sobre el botón */
+}
+
+/* Estilo para la barra de navegación */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;  /* Enlaces blancos */
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent; /* Fondo transparente para los enlaces */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el hover del enlace */
+header nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent; /* Fondo transparente */
+    box-shadow: none; /* Sin sombra en las secciones */
+    color: white; /* Asegura que el texto en las secciones sea blanco */
+}
+
+/* Estilo para el footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: transparent; /* Fondo transparente para el footer */
+    color: white;  /* Texto blanco en el footer */
+}
+
+/* Estilos específicos para las secciones con flexbox */
+#experiencia, #conocimientos, #contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
